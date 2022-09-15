@@ -3,10 +3,10 @@
 Firmware and research tools for Nordic Semiconductor nRF24LU1+ based USB dongles and breakout boards.
 
 Original repo from [BastilleResearch](https://github.com/BastilleResearch/nrf-research-firmware)  with following changes:
-- The code was refactored to Python version 3
-- Add logitech firmware dumping tool [(commit from "ranma")](https://github.com/BastilleResearch/nrf-research-firmware/compare/master...ranma:nrf-research-firmware:master)
-- Add Metasploit Hwbridge Relay [(commit from "OpenGarages")](https://github.com/BastilleResearch/nrf-research-firmware/compare/master...OpenGarages:nrf-research-firmware:hwbridge)
-- Add procedure to reset USB dongle during nrf24 class init to prevent "Operation timed out" error
+- The python code was refactored to version 3
+- Added logitech firmware dumping tool [(commit from "ranma")](https://github.com/BastilleResearch/nrf-research-firmware/compare/master...ranma:nrf-research-firmware:master)
+- Added Metasploit Hwbridge Relay [(commit from "OpenGarages")](https://github.com/BastilleResearch/nrf-research-firmware/compare/master...OpenGarages:nrf-research-firmware:hwbridge)
+- Added USB dongle reset procedure to nrf24 class init to prevent "Operation timed out" error
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Original repo from [BastilleResearch](https://github.com/BastilleResearch/nrf-re
 Install dependencies on Ubuntu:
 
 ```
-sudo apt-get install sdcc binutils python3 python-pip
+sudo apt-get install sdcc binutils python3 python3-pip
 sudo pip install -U pip
 sudo pip install -U -I pyusb
 sudo pip install -U platformio
