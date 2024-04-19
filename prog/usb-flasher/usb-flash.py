@@ -122,7 +122,7 @@ for page in range(page_count):
 
     # Read the block
     dongle.write(0x01, [0x03, block_number], usb_timeout)
-    block_read = array.array('B', dongle.read(0x81, 64, usb_timeout)).tostring()
+    block_read = array.array('B', dongle.read(0x81, 64, usb_timeout)).tobytes()
     if block_read != data[block_number*64:block_number*64+64]:
       raise Exception('Verification failed on page {0}, block {1}'.format(page, block))
     block_number += 1
