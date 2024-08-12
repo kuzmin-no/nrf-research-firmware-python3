@@ -15,6 +15,7 @@ def crc_update(crc, data):
 # Make sure a firmware image path was passed in
 if len(sys.argv) < 3:
   print("Usage: sudo ./logitech-usb-flash.py [firmware-image.bin] [firmware-image.ihx]")
+  quit()
 
 # Compute the CRC of the firmware image
 logging.info("Computing the CRC of the firmware image")

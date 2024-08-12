@@ -21,8 +21,9 @@ import subprocess
 import binascii
 
 # Make sure a firmware image path was passed in
-if len(sys.argv) < 3:
+if len(sys.argv) < 2:
   print("Usage: sudo ./logitech-usb-flash.py [firmware-image.hex]")
+  quit()
 
 # Read in the firmware image
 with open(sys.argv[1]) as f:
