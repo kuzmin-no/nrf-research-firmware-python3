@@ -93,7 +93,7 @@ if not dongle:
 
 # Write the data, one page at a time
 logging.info("Writing image to flash")
-page_count = len(data) / 512
+page_count = int(len(data) // 512)
 for page in range(page_count):
 
   # Tell the bootloader that we are going to write a page
